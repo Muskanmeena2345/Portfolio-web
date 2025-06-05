@@ -1,0 +1,113 @@
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+nav {
+position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+width: 100%;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+z-index: 1000;
+top: 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border: 2px solid #000;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;       /* 👈 Font size */
+  margin-right: 80px;    /* 👈 Spacing between links */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #c77dff;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #c77dff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.pdf-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .pdf-preview {
+      width: 80%;
+      height: 700px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .download-btn {
+      margin-top: 140px;
+      margin-left:40rem ;
+      padding: 10px 20px;
+      background-color: #9648a3;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #7b1fa2;
+    }
+
+
+</style>
+
+<body>
+<nav>
+    <div class="logo">Ms.</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <a class="download-btn" href="Muskan-meena.pdf" download>📄 Download CV</a>
+
+  <div class="pdf-container">
+    <iframe class="pdf-preview" src="Muskan-meena.pdf"></iframe>
+  </div>
+<script src="script.js"></script>
